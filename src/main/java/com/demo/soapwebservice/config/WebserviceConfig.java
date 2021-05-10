@@ -1,4 +1,4 @@
-package com.demo.soapwebservice.controller;
+package com.demo.soapwebservice.config;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
@@ -12,11 +12,11 @@ import org.springframework.ws.transport.http.MessageDispatcherServlet;
 public class WebserviceConfig {
 
     @Bean
-    ServletRegistrationBean messageDispatcherServlet(ApplicationContext  context){
+    ServletRegistrationBean messageDispatcherServlet(ApplicationContext context) {
         MessageDispatcherServlet messageDispatcherServlet = new MessageDispatcherServlet();
         messageDispatcherServlet.setApplicationContext(context);
         messageDispatcherServlet.setTransformWsdlLocations(true);
-        return new ServletRegistrationBean(messageDispatcherServlet,"/ws/*");
+        return new ServletRegistrationBean(messageDispatcherServlet, "/ws/*");
     }
 
 }

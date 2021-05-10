@@ -43,7 +43,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "GetCourseDetailsResponse")
 public class GetCourseDetailsResponse {
 
+    @XmlElement
     protected int id;
+
     @XmlElement(required = true)
     protected String name;
 

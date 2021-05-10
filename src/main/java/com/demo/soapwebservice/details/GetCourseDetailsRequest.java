@@ -8,10 +8,7 @@
 
 package com.demo.soapwebservice.details;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
@@ -40,6 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "GetCourseDetailsRequest")
 public class GetCourseDetailsRequest {
 
+    @XmlElement
     protected int id;
 
     /**
